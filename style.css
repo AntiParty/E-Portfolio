@@ -99,6 +99,7 @@ nav {
 
 section:nth-child(even) {
     background-color: #d1cfcf;
+    animation: fade-up 650ms 400ms backwards;
 }
 
 .container {
@@ -107,10 +108,15 @@ section:nth-child(even) {
 
 .section__title {
     margin-bottom: 20px;
+    animation: fade-up 650ms 400ms backwards;
 }
 
 
 /* ABOUT ME */
+
+.about-me__links {
+    animation: fade-up 650ms 800ms backwards;
+}
 
 #about-me {
     min-height: 100vh;
@@ -139,6 +145,7 @@ section:nth-child(even) {
     overflow: hidden;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.29);
     margin-bottom: 25px;
+    animation: animate-profile-picture 800ms;
 }
 
 .about-me__picture {
@@ -147,11 +154,24 @@ section:nth-child(even) {
 
 .about-me__info--title {
     margin-bottom: 15px;
+    animation: fade-up 650ms 400ms backwards;
+}
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .about-me__info--para {
     font-size: 20px;
     margin-bottom: 28px;
+    animation: fade-up 650ms 400ms backwards;
 }
 
 .about-me__link {
@@ -169,6 +189,7 @@ section:nth-child(even) {
 
 .about-me__img {
     width: 100%;
+    animation: fade-up 850ms 900ms backwards;
 }
 
 
@@ -177,6 +198,7 @@ section:nth-child(even) {
 .language__img {
     width: 100%;
     max-width: 100px;
+    animation: fade-up 950ms 900ms backwards;
 }
 
 .language {
@@ -221,4 +243,19 @@ section:nth-child(even) {
     transform: scale(1);
     transition: all 300ms;
     opacity: 1;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes animate-profile-picture {
+    0% {
+        transform: scale(0);
+    }
+    80% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
